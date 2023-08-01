@@ -20,5 +20,5 @@ getMovies('avengers', () => {
 
 getMovies('avatar', () => {
     console.log('아바타!')
-    
+    console.log('test')
 })
