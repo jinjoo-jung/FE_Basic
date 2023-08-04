@@ -4,14 +4,13 @@
 
 
 
-const inputEl = document.querySelector('input')
-const childEl = document.querySelector('.child')
+const parentEl = document.querySelector('.parent')
+const handler = () => {
+    console.log('Parent!')
+}
 
-inputEl.addEventListener('keydown', event => {
-    console.log(event.key)
-
+parentEl.addEventListener('click', handler, {
+    capture: true
 })
+parentEl.removeEventListener('click', handler)
 
-childEl.addEventListener('click', event => {
-    console.log(event)
-})
