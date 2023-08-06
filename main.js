@@ -4,15 +4,16 @@
 
 
 
-const parentEl = document.querySelector('.parent')
-const handler = () => {
-    console.log('Parent!')
-    console.log('test')    
+const child1 = document.querySelector('.child::nth-child(1)')
+const child2 = document.querySelector('.child::nth-child(2)')
 
-}
-
-parentEl.addEventListener('click', handler, {
-
+child1.addEventListener('hello-world', event => {
+    console.log('커스텀 이벤트 발생!')
+    console.log(event.detail)
 })
-parentEl.removeEventListener('click', handler)
 
+child2.addEventListener('click', () => {
+    child1.dispatchEvent(new CustomEvent('hello-world!', {
+        detail : 123
+    }))
+})
