@@ -42,4 +42,5 @@ inputEl.addEventListener('keydown', event => {
     if(event.key ==='Enter') {
         pagePush(evnet.target.value)
     }
+    
 })
