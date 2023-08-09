@@ -1,14 +1,14 @@
 const page1 =
   <section class = "page1">
-    <h1>Page1</h1>
+    <h1>Page 1</h1>
   </section>
 const page2 = 
   <section class= "page2">
-    <h1>Page2</h1>
+    <h1>Page 2</h1>
   </section>
 const page3 = 
   <section page3 = "page3">
-    <h1>Page3</h1>
+    <h1>Page 3</h1>
   </section>
 const pageNotFound = 
    <section>
@@ -35,6 +35,7 @@ render()
 const pagePush = num => {
     history.pushState(`전달할 데이터 - ${num}` , null , `#/page${num}`)
     render()
+
 }
 
 const inputEl = document.querySelector('nav input')
